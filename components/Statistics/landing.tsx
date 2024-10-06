@@ -49,33 +49,37 @@ const Landing: React.FC = (): JSX.Element => {
                                 </div>
                                 <div className="w-full md:w-1/1 lg:w-1/1 mb-6">
                                     <div className="web-hidden">
-                                        <select id="tabs" className="bg-gray-50 px-3 py-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-                                            <option>Contenus</option>
-                                            <option>Contrat</option>
-                                            <option>Liste Mots-clés</option>
-                                            <option>Backlinks</option>
-                                            <option>Social</option>
-                                            <option>Configuration IA</option>
+                                        <select
+                                            id="tabs"
+                                            className="bg-gray-50 px-3 py-3 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                                            onChange={(e) => { setActiveComponent(e.target.value) }}
+                                        >
+                                            <option value="contenus">Contenus</option>
+                                            <option value="contrat">Contrat</option>
+                                            <option value="liste">Liste Mots-clés</option>
+                                            <option value="backlinks">Backlinks</option>
+                                            <option value="social">Social</option>
+                                            <option value="configuration">Configuration IA</option>
                                         </select>
                                     </div>
                                     <ul className="hidden text-sm font-medium border text-center text-gray-500 sm:flex dark:divide-gray-700 dark:text-gray-400">
-                                        <li onClick={() => { setActiveComponent('contenus') }} className={`w-full focus-within:z-10 ${activeComponent === 'contenus' ? 'bg-[#CEF3C8]' : ''}`}>
-                                            <a href="#" className="inline-block text-lg font-bold w-full p-4 bg-tab-active text-gray-900 bg-gray-100 border-r border-gray-200 dark:border-gray-700 rounded-s-lg focus:ring-4 focus:ring-blue-300 active focus:outline-none dark:bg-gray-700 dark:text-white" aria-current="page">Contenus</a>
+                                        <li onClick={() => { setActiveComponent('contenus') }} className={`w-full focus-within:z-10 ${activeComponent === 'contenus' ? 'bg-tab text-gray-900' : ''}`}>
+                                            <a className="inline-block text-lg font-bold w-full p-4 border-r border-gray-200 dark:border-gray-700 rounded-s-lg focus:ring-4 focus:ring-blue-300 active focus:outline-none dark:bg-gray-700 dark:text-white" aria-current="page">Contenus</a>
                                         </li>
-                                        <li onClick={() => { setActiveComponent('contrat') }} className={`w-full focus-within:z-10 ${activeComponent === 'contrat' ? 'bg-[#CEF3C8]' : ''}`}>
-                                            <a href="#" className="inline-block text-lg font-bold w-full p-4 bg-new-light border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Contrat</a>
+                                        <li onClick={() => { setActiveComponent('contrat') }} className={`w-full focus-within:z-10 ${activeComponent === 'contrat' ? 'bg-tab text-gray-900' : ''}`}>
+                                            <a className="inline-block text-lg font-bold w-full p-4  border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Contrat</a>
                                         </li>
-                                        <li onClick={() => { setActiveComponent('liste') }} className={`w-full focus-within:z-10 ${activeComponent === 'liste' ? 'bg-[#CEF3C8]' : ''}`}>
-                                            <a href="#" className="inline-block text-lg font-bold w-full p-4 bg-new-light border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Liste Mots-clés</a>
+                                        <li onClick={() => { setActiveComponent('liste') }} className={`w-full focus-within:z-10 ${activeComponent === 'liste' ? 'bg-tab text-gray-900' : ''}`}>
+                                            <a className="inline-block text-lg font-bold w-full p-4  border-r border-gray-200 dark:border-gray-700 hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:ring-blue-300 focus:outline-none dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Liste Mots-clés</a>
                                         </li>
-                                        <li onClick={() => { setActiveComponent('backlinks') }} className={`w-full focus-within:z-10 ${activeComponent === 'backlinks' ? 'bg-[#CEF3C8]' : ''}`}>
-                                            <a href="#" className="inline-block text-lg font-bold w-full p-4 bg-new-light border-r border-gray-200 dark:border-gray-700 rounded-e-lg hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Backlinks</a>
+                                        <li onClick={() => { setActiveComponent('backlinks') }} className={`w-full focus-within:z-10 ${activeComponent === 'backlinks' ? 'bg-tab text-gray-900' : ''}`}>
+                                            <a className="inline-block text-lg font-bold w-full p-4  border-r border-gray-200 dark:border-gray-700 rounded-e-lg hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Backlinks</a>
                                         </li>
-                                        <li onClick={() => { setActiveComponent('social') }} className={`w-full focus-within:z-10 ${activeComponent === 'social' ? 'bg-[#CEF3C8]' : ''}`}>
-                                            <a href="#" className="inline-block text-lg font-bold w-full p-4 bg-new-light border-r border-gray-200 dark:border-gray-700 rounded-e-lg hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Social</a>
+                                        <li onClick={() => { setActiveComponent('social') }} className={`w-full focus-within:z-10 ${activeComponent === 'social' ? 'bg-tab text-gray-900' : ''}`}>
+                                            <a className="inline-block text-lg font-bold w-full p-4  border-r border-gray-200 dark:border-gray-700 rounded-e-lg hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Social</a>
                                         </li>
-                                        <li onClick={() => { setActiveComponent('configuration') }} className={`w-full focus-within:z-10 ${activeComponent === 'configuration' ? 'bg-[#CEF3C8]' : ''}`}>
-                                            <a href="#" className="inline-block text-lg font-bold w-full p-4 bg-new-light border-s-0 border-gray-200 dark:border-gray-700 rounded-e-lg hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Configuration IA</a>
+                                        <li onClick={() => { setActiveComponent('configuration') }} className={`w-full focus-within:z-10 ${activeComponent === 'configuration' ? 'bg-tab text-gray-900' : ''}`}>
+                                            <a className="inline-block text-lg font-bold w-full p-4  border-s-0 border-gray-200 dark:border-gray-700 rounded-e-lg hover:text-gray-700 hover:bg-gray-50 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:hover:text-white dark:bg-gray-800 dark:hover:bg-gray-700">Configuration IA</a>
                                         </li>
 
                                     </ul>

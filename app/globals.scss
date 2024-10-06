@@ -3241,6 +3241,17 @@ body {
   width: max-content;
 }
 
+.popup-content {
+  max-height: 30rem;
+  overflow-y: auto;  
+}
+
+.focus\:ring-blue-300:focus {
+  --tw-ring-opacity: 1;
+  --tw-ring-color: unset !important;
+  --tw-ring-shadow :unset !important
+}
+
 .border-orange
 {
   border-color: #F24E1E;

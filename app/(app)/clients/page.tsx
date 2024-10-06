@@ -68,8 +68,8 @@ const ClientComponent = async (): Promise<JSX.Element> => {
                           24
                         </td>
                         <td className="px-6 py-5 flex items-center">
-                          <a href="#"><img className="mr-5" src="/images/hero/eye.png" /></a>
-                          <a href="#"><img src="/images/hero/link.png" /></a>
+                          <a ><img className="mr-5" src="/images/hero/eye.png" /></a>
+                          <a ><img src="/images/hero/link.png" /></a>
                         </td>
                       </tr>
                       <tr className="bg-white border dark:bg-gray-800">
@@ -89,8 +89,8 @@ const ClientComponent = async (): Promise<JSX.Element> => {
                           24
                         </td>
                         <td className="px-6 py-5 flex items-center">
-                          <a href="#"><img className="mr-5" src="/images/hero/eye.png" /></a>
-                          <a href="#"><img src="/images/hero/link.png" /></a>
+                          <a ><img className="mr-5" src="/images/hero/eye.png" /></a>
+                          <a ><img src="/images/hero/link.png" /></a>
                         </td>
                       </tr>
                       <tr className="bg-white border dark:bg-gray-800">
@@ -110,8 +110,8 @@ const ClientComponent = async (): Promise<JSX.Element> => {
                           24
                         </td>
                         <td className="px-6 py-5 flex items-center">
-                          <a href="#"><img className="mr-5" src="/images/hero/eye.png" /></a>
-                          <a href="#"><img src="/images/hero/link.png" /></a>
+                          <a ><img className="mr-5" src="/images/hero/eye.png" /></a>
+                          <a ><img src="/images/hero/link.png" /></a>
                         </td>
                       </tr>
                     </tbody>

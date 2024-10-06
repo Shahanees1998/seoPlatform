@@ -22,13 +22,13 @@ const ConfigurationComponent: React.FC = (): JSX.Element => {
                       <option>Configuration IA</option>
                     </select>
                   </div>
-                  <div className="w-full md:w-1/1 lg:w-1/1 px-5 mb-10">
+                  <div className="w-full md:w-1/1 lg:w-1/1 px-5 mb-4">
                     <textarea rows={15} className="bg-gray-50 px-3 py-3 mt-5 shadow-lg text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"></textarea>
                   </div>
                   <div className="w-full md:w-1/1 lg:w-1/1 px-5 mb-10 flex flex-wrap mt-12">
-                    <div className="flex justify-center py-5 mt-5 mx-auto">
+                    <div className="flex justify-center py-5 mx-auto">
                       <a href="clients-ajout.html">
-                        <button type="button" className="block px-10 py-2 text-center text-white font-bold text-1xl bg-dark-blue rounded-full">Valider</button>
+                        <button type="button" style={{ backgroundColor: '#1B44C8' }} className="block px-10 py-2 text-center text-white font-bold text-1xl bg-dark-blue rounded-full">Valider</button>
                       </a>
                     </div>
                   </div>
@@ -66,7 +66,7 @@ const ConfigurationComponent: React.FC = (): JSX.Element => {
                               Titre SEO
                             </td>
                             <td className="px-6 py-5">
-                              <a href="#"><img src="/images/hero/edit.png" /></a>
+                              <a ><img src="/images/hero/edit.png" /></a>
                             </td>
                         </tr>
                     </tbody>

@@ -9,8 +9,8 @@ import '../data-tables-css.css'
 import HeaderComponent from 'components/Header/header'
 
 export const metadata: Metadata = {
-  title: 'Jaggasar',
-  description: 'Your personal Jaggasar service'
+  title: 'SEOplatform',
+  description: 'Your personal SEO platform'
 }
 
 export default async function RootLayout ({
@@ -21,7 +21,7 @@ export default async function RootLayout ({
   params: { lang: string }
 }>): Promise<JSX.Element> {
   return (
-    <html lang={params.lang} className="bg-primary" style={{ fontSize: '1rem' }}>
+    <html lang={params.lang} className="bg-white" style={{ fontSize: '1rem' }}>
       <Head>
         {/* Swiper and Animate CSS */}
         <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />

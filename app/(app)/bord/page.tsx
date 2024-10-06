@@ -64,8 +64,8 @@ const HomeComponent = async (): Promise<JSX.Element> => {
                           24
                         </td>
                         <td className="px-6 py-5 flex items-center">
-                          <a href="#"><img className="mr-5" src="/images/hero/eye.png" /></a>
-                          <a href="#"><img src="/images/hero/link.png" /></a>
+                          <a ><img className="mr-5" src="/images/hero/eye.png" /></a>
+                          <a ><img src="/images/hero/link.png" /></a>
                         </td>
                       </tr>
                       <tr className="bg-white border dark:bg-gray-800">
@@ -85,8 +85,8 @@ const HomeComponent = async (): Promise<JSX.Element> => {
                           24
                         </td>
                         <td className="px-6 py-5 flex items-center">
-                          <a href="#"><img className="mr-5" src="/images/hero/eye.png" /></a>
-                          <a href="#"><img src="/images/hero/link.png" /></a>
+                          <a ><img className="mr-5" src="/images/hero/eye.png" /></a>
+                          <a ><img src="/images/hero/link.png" /></a>
                         </td>
                       </tr>
                       <tr className="bg-white border dark:bg-gray-800">
@@ -106,8 +106,8 @@ const HomeComponent = async (): Promise<JSX.Element> => {
                           24
                         </td>
                         <td className="px-6 py-5 flex items-center">
-                          <a href="#"><img className="mr-5" src="/images/hero/eye.png" /></a>
-                          <a href="#"><img src="/images/hero/link.png" /></a>
+                          <a ><img className="mr-5" src="/images/hero/eye.png" /></a>
+                          <a ><img src="/images/hero/link.png" /></a>
                         </td>
                       </tr>
                     </tbody>
@@ -172,8 +172,8 @@ const HomeComponent = async (): Promise<JSX.Element> => {
                           1/2 (50%)
                         </td>
                         <td className="px-6 py-5 flex items-center">
-                          <a href="#"><img className="mr-5" src="/images/hero/eye.png" /></a>
-                          <a href="#"><img src="/images/hero/link.png" /></a>
+                          <a ><img className="mr-5" src="/images/hero/eye.png" /></a>
+                          <a ><img src="/images/hero/link.png" /></a>
                         </td>
                       </tr>
                       <tr className="bg-white border dark:bg-gray-800">
@@ -193,8 +193,8 @@ const HomeComponent = async (): Promise<JSX.Element> => {
                           1/2 (50%)
                         </td>
                         <td className="px-6 py-5 flex items-center">
-                          <a href="#"><img className="mr-5" src="/images/hero/eye.png" /></a>
-                          <a href="#"><img src="/images/hero/link.png" /></a>
+                          <a ><img className="mr-5" src="/images/hero/eye.png" /></a>
+                          <a ><img src="/images/hero/link.png" /></a>
                         </td>
                       </tr>
                       <tr className="bg-white border dark:bg-gray-800">
@@ -214,8 +214,8 @@ const HomeComponent = async (): Promise<JSX.Element> => {
                           1/2 (50%)
                         </td>
                         <td className="px-6 py-5 flex items-center">
-                          <a href="#"><img className="mr-5" src="/images/hero/eye.png" /></a>
-                          <a href="#"><img src="/images/hero/link.png" /></a>
+                          <a ><img className="mr-5" src="/images/hero/eye.png" /></a>
+                          <a ><img src="/images/hero/link.png" /></a>
                         </td>
                       </tr>
                     </tbody>
@@ -274,8 +274,8 @@ const HomeComponent = async (): Promise<JSX.Element> => {
                           <div className="bg-red px-5 py-1 text-white rounded-full text-center">Publication</div>
                         </td>
                         <td className="px-6 py-5 flex items-center">
-                          <a href="#"><img className="mr-5" src="/images/hero/eye.png" /></a>
-                          <a href="#"><img src="/images/hero/link.png" /></a>
+                          <a ><img className="mr-5" src="/images/hero/eye.png" /></a>
+                          <a ><img src="/images/hero/link.png" /></a>
                         </td>
                       </tr>
                       <tr className="bg-white border dark:bg-gray-800">
@@ -292,8 +292,8 @@ const HomeComponent = async (): Promise<JSX.Element> => {
                           <div className="bg-green px-5 py-1 text-white rounded-full text-center">Corrections</div>
                         </td>
                         <td className="px-6 py-5 flex items-center">
-                          <a href="#"><img className="mr-5" src="/images/hero/eye.png" /></a>
-                          <a href="#"><img src="/images/hero/link.png" /></a>
+                          <a ><img className="mr-5" src="/images/hero/eye.png" /></a>
+                          <a ><img src="/images/hero/link.png" /></a>
                         </td>
                       </tr>
                       <tr className="bg-white border dark:bg-gray-800">
@@ -310,8 +310,8 @@ const HomeComponent = async (): Promise<JSX.Element> => {
                           <div className="bg-blue px-5 py-1 text-white rounded-full text-center">Mise à jour</div>
                         </td>
                         <td className="px-6 py-5 flex items-center">
-                          <a href="#"><img className="mr-5" src="/images/hero/eye.png" /></a>
-                          <a href="#"><img src="/images/hero/link.png" /></a>
+                          <a ><img className="mr-5" src="/images/hero/eye.png" /></a>
+                          <a ><img src="/images/hero/link.png" /></a>
                         </td>
                       </tr>
                     </tbody>

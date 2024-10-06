@@ -22,9 +22,9 @@ const BackLinksComponent: React.FC = (): JSX.Element => {
                   <div className="w-full md:w-1/1 lg:w-1/1 px-5 flex justify-end items-center sm-flex-none">
                     <div className="w-full border-b border-gray-200 mt-5"></div>
                   </div>
-                  <div className="w-full md:w-1/2 lg:w-1/2 px-5 flex flex-wrap mt-12">
+                  <div className="w-full md:w-1/2 lg:w-1/2 px-5 flex items-center justify-between flex-wrap mt-12">
                     <h2 className="text-1xl font-bold text-left flex justify-between items-center mr-5">Plateforme :</h2>
-                    <select id="tabs" className="bg-gray-50 px-3 py-3 border shadow-lg border-blue text-blue w65 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <select id="tabs" className="bg-gray-50 px-3 py-1 h-11 border shadow-lg border-blue text-blue w65 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                       <option>Choisissez</option>
                       <option>Contrat</option>
                       <option>Liste Mots-clés</option>
@@ -33,13 +33,13 @@ const BackLinksComponent: React.FC = (): JSX.Element => {
                       <option>Configuration IA</option>
                     </select>
                   </div>
-                  <div className="w-full md:w-1/2 lg:w-1/2 px-5 flex flex-wrap mt-12">
+                  <div className="w-full md:w-1/2 lg:w-1/2 px-5 flex justify-between flex-wrap mt-12">
                     <h2 className="text-1xl font-bold text-left flex justify-between items-center mr-5">Plateforme :</h2>
-                    <input type="email" id="email" className="bg-gray-50 px-3 py-3 border w50 border-gray-200 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Date of birth" value="03/01/2024" />
+                    <input type="email" id="email" className="bg-white h-11 px-3 py-3 border w-50 border-gray-200 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Date of birth" value="03/01/2024" />
                   </div>
-                  <div className="w-full md:w-1/2 lg:w-1/2 px-5 flex flex-wrap mt-12">
+                  <div className="w-full md:w-1/2 lg:w-1/2 px-5 flex items-center justify-between flex-wrap mt-12">
                     <h2 className="text-1xl font-bold text-left flex justify-between items-center mr-5">Type d’ancre : </h2>
-                    <select id="tabs" className="bg-gray-50 px-3 py-3 border shadow-lg border-blue text-blue w65 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <select id="tabs" className="bg-gray-50 px-3 h-11 border shadow-lg border-blue text-blue w65 text-sm rounded-full focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                       <option>Choisissez</option>
                       <option>Contrat</option>
                       <option>Liste Mots-clés</option>
@@ -48,26 +48,26 @@ const BackLinksComponent: React.FC = (): JSX.Element => {
                       <option>Configuration IA</option>
                     </select>
                   </div>
-                  <div className="w-full md:w-1/2 lg:w-1/2 px-5 flex flex-wrap mt-12">
+                  <div className="w-full md:w-1/2 lg:w-1/2 px-5 flex justify-between flex-wrap mt-12">
                     <h2 className="text-1xl font-bold text-left flex justify-between items-center mr-5">Prix d’achat :</h2>
-                    <input type="email" id="email" className="bg-gray-50 px-3 py-3 border w50 border-gray-200 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Date of birth" value="45" />
+                    <input type="email" id="email" className="bg-white px-3 py-3 border w-50 border-gray-200 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Date of birth" value="45" />
                   </div>
                   <div className="w-full md:w-1/3 lg:w-1/3 px-5 flex flex-wrap mt-12">
                     <h2 className="text-1xl font-bold text-left flex justify-between items-center mr-5">TF :  </h2>
-                    <input type="email" id="email" className="bg-gray-50 px-3 py-3 border w50 border-gray-200 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Date of birth" value="45" />
+                    <input type="email" id="email" className="bg-white px-3 py-3 border w-50 border-gray-200 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Date of birth" value="45" />
                   </div>
                   <div className="w-full md:w-1/3 lg:w-1/3 px-5 flex flex-wrap mt-12">
                     <h2 className="text-1xl font-bold text-left flex justify-between items-center mr-5">TC : </h2>
-                    <input type="email" id="email" className="bg-gray-50 px-3 py-3 border w50 border-gray-200 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Date of birth" value="45" />
+                    <input type="email" id="email" className="bg-white px-3 py-3 border w-50 border-gray-200 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Date of birth" value="45" />
                   </div>
                   <div className="w-full md:w-1/3 lg:w-1/3 px-5 flex flex-wrap mt-12">
                     <h2 className="text-1xl font-bold text-left flex justify-between items-center mr-5">DA : </h2>
-                    <input type="email" id="email" className="bg-gray-50 px-3 py-3 border w50 border-gray-200 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Date of birth" value="45" />
+                    <input type="email" id="email" className="bg-white px-3 py-3 border w-50 border-gray-200 text-black text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Date of birth" value="45" />
                   </div>
                   <div className="w-full md:w-1/1 lg:w-1/1 px-5 mb-10 flex flex-wrap mt-12">
                     <div className="flex justify-center py-5 mt-5 mx-auto">
                       <a href="clients-ajout.html">
-                        <button type="button" className="block px-10 py-2 text-center text-white font-bold text-1xl bg-dark-blue rounded-full">Valider</button>
+                        <button type="button" style={{ backgroundColor: '#1B44C8' }} className="block px-10 py-2 text-center text-white font-bold text-1xl bg-dark-blue rounded-full">Valider</button>
                       </a>
                     </div>
                   </div>
@@ -77,7 +77,7 @@ const BackLinksComponent: React.FC = (): JSX.Element => {
             <div className="w-full md:w-1/1 lg:w-1/1 mb-6 mt-12">
               <div className="flex justify-end">
                 <a href="clients-ajout.html">
-                  <button type="button" className="block px-10 py-2 text-center text-white font-bold text-1xl mb-10 bg-dark-blue rounded-full">Ajouter un contrat</button>
+                  <button type="button" style={{ backgroundColor: '#1B44C8' }} className="block px-10 py-2 text-center text-white font-bold text-1xl mb-10 bg-dark-blue rounded-full">Ajouter un contrat</button>
                 </a>
               </div>
               <div className="relative overflow-x-auto">
@@ -128,7 +128,7 @@ const BackLinksComponent: React.FC = (): JSX.Element => {
                               <div className="bg-red px-5 py-1 text-white rounded-full text-center">Validé</div>
                             </td>
                             <td className="px-6 py-5 flex items-center">
-                              <a href="#"><img src="/images/hero/eye.png" /></a>
+                              <a ><img src="/images/hero/eye.png" /></a>
                             </td>
                         </tr>
                     </tbody>

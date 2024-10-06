@@ -6,7 +6,7 @@ export default function Home () {
         <>
            <body className="auth">
     <div className="container">
-      <a href="#"><img className="mt-12" src="/images/auth/logo.png" /></a>
+      <a ><img className="mt-12" src="/images/auth/logo.png" /></a>
       <div className="wow fadeInUp" data-wow-delay=".2s" style={{ visibility: 'visible', animationDelay: '0.2s' }}>
         <div className="-mx-4 flex flex-wrap items-center">
           <div className="w-full px-4 lg:w-1/2">
