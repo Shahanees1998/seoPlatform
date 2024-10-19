@@ -7,6 +7,8 @@ import '../globals.scss'
 import '../globals-public.css'
 import '../data-tables-css.css'
 import HeaderComponent from 'components/Header/header'
+import { getUserProfile } from 'actions/authActions'
+import { redirect } from 'next/navigation'
 
 export const metadata: Metadata = {
   title: 'SEOplatform',
@@ -20,6 +22,12 @@ export default async function RootLayout ({
   children: React.ReactNode
   params: { lang: string }
 }>): Promise<JSX.Element> {
+  const user = await getUserProfile()
+
+  if (!(user?.success)) {
+    return redirect('/auth/login')
+  }
+
   return (
     <html lang={params.lang} className="bg-white" style={{ fontSize: '1rem' }}>
       <Head>
@@ -41,7 +49,7 @@ export default async function RootLayout ({
         />
       </Head>
       <body className={'h-full bg-white'}>
-        <HeaderComponent></HeaderComponent>
+        <HeaderComponent />
         {children}
       </body>
     </html>

@@ -4,43 +4,16 @@ import { BASE_URL } from '../constants/constants'
 import { getCookieValue } from '../libs/serverHelper'
 import { type ActionResponse } from '../types'
 
-export const loginUser = async (
-  email: string,
-  password: string
-): Promise<ActionResponse> => {
-  try {
-    const response = await fetch(`${BASE_URL}/api/v1/login`, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({ email, password })
-    })
-    const data: any = await response.json()
-
-    if (data?.status === 'success') {
-      return {
-        data: data?.data,
-        error: '',
-        success: true
-      }
-    } else {
-      return {
-        data: null,
-        error: 'Something went wrong',
-        success: false
-      }
-    }
-  } catch (error: any) {
-    return {
-      data: null,
-      error: JSON.stringify(error?.message ?? ''),
-      success: false
-    }
-  }
+interface AddCustomerPayload {
+  email: string
+  business_name: string
+  first_name: string
+  last_name: string
 }
 
-export const getUserProfile = async (): Promise<ActionResponse> => {
+export const addCustomer = async (
+  payload: AddCustomerPayload
+): Promise<ActionResponse> => {
   try {
     const accessToken = getCookieValue('access_token')
 
@@ -52,13 +25,19 @@ export const getUserProfile = async (): Promise<ActionResponse> => {
       }
     }
 
-    const response = await fetch(`${BASE_URL}/api/v1/profile`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${accessToken}`
-      }
-    })
+    const myHeaders = new Headers()
+    myHeaders.append('Authorization', `Bearer ${accessToken}`)
+    myHeaders.append('Content-Type', 'application/json')
+
+    const requestOptions: any = {
+      method: 'POST',
+      headers: myHeaders,
+      body: JSON.stringify(payload),
+      redirect: 'follow'
+    }
+
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+    const response = await fetch(`${BASE_URL}/api/v1/customers`, requestOptions)
     const data: any = await response.json()
 
     if (data?.status === 'success') {
@@ -83,7 +62,7 @@ export const getUserProfile = async (): Promise<ActionResponse> => {
   }
 }
 
-export const getUsers = async (): Promise<ActionResponse> => {
+export const getCustomers = async (): Promise<ActionResponse> => {
   try {
     const accessToken = getCookieValue('access_token')
 
@@ -95,13 +74,18 @@ export const getUsers = async (): Promise<ActionResponse> => {
       }
     }
 
-    const response = await fetch(`${BASE_URL}/api/v1/users`, {
+    const myHeaders = new Headers()
+    myHeaders.append('Authorization', `Bearer ${accessToken}`)
+    myHeaders.append('Content-Type', 'application/json')
+
+    const requestOptions: any = {
       method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-        Authorization: `Bearer ${accessToken}`
-      }
-    })
+      headers: myHeaders,
+      redirect: 'follow'
+    }
+
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
+    const response = await fetch(`${BASE_URL}/api/v1/customers`, requestOptions)
     const data: any = await response.json()
 
     if (data?.status === 'success') {

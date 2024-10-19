@@ -1,5 +1,9 @@
+import { getUsers } from 'actions/authActions'
 import React from 'react'
 const HomeComponent = async (): Promise<JSX.Element> => {
+  const users = await getUsers()
+
+  console.log('users ======', users?.data)
   return (
     <>
       <div

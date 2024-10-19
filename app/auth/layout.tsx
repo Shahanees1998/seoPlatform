@@ -6,6 +6,8 @@ import React from 'react'
 import '../globals.scss'
 import '../data-tables-css.css'
 import 'primeicons/primeicons.css'
+import { getUserProfile } from 'actions/authActions'
+import { redirect } from 'next/navigation'
 
 export const metadata: Metadata = {
   title: 'Couriler',
@@ -19,15 +21,15 @@ export default async function RootLayout ({
   children: React.ReactNode
   params: { lang: string }
 }>): Promise<JSX.Element> {
-  // const session = await getServerSession()
-  // await fixSession(session)
-  // const dict = getDictionary(params.lang)
+  const user = await getUserProfile()
+
+  if (user?.success) {
+    return redirect('/bord')
+  }
 
   return (
-    <>
-        <html lang={params.lang} className="h-full text-xs 2xl:text-base" style={{ fontSize: '1rem' }}>
-        {children}
-      </html>
-    </>
+    <html lang={params.lang}>
+      <body>{children}</body>
+    </html>
   )
 }
