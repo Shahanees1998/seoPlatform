@@ -8,10 +8,13 @@ import SocioComponent from './social'
 import BackLinksComponent from './backlinks'
 import ContratComponent from './contrat'
 
-const Landing: React.FC = (): JSX.Element => {
+interface LandingProps {
+  contarcts: any
+}
+
+const Landing: React.FC<LandingProps> = ({ contarcts }) => {
   // State to manage the active component
   const [activeComponent, setActiveComponent] = useState('contenus')
-
   const renderComponent = (): any => {
     switch (activeComponent) {
       case 'contenus':
@@ -25,7 +28,7 @@ const Landing: React.FC = (): JSX.Element => {
       case 'backlinks':
         return <BackLinksComponent />
       case 'contrat':
-        return <ContratComponent />
+        return <ContratComponent contarcts={contarcts}/>
       default:
         return <ContenusComponent />
     }

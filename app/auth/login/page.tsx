@@ -29,7 +29,7 @@ export default function Home (): JSX.Element {
     <>
       <div className="container">
         <a>
-          <img className="mt-12" src="/images/auth/logo.png" />
+          <h2 className='text-3xl text-dark-700 mt-12 font-bold'>SEO PLatform</h2>
         </a>
         <div
           className="wow fadeInUp"
@@ -100,12 +100,6 @@ export default function Home (): JSX.Element {
                   {/* <img className="w-3 ml-5" src="/images/auth/arrow.svg" /> */}
                 </button>
 
-                <p className="text-base text-lg mt-12 leading-relaxed text-white dark:text-dark-6">
-                  Don’t have an account?{' '}
-                  <a href="/auth/signup">
-                    <span className="text-blue-primary">Sing up</span>
-                  </a>
-                </p>
               </div>
             </div>
           </div>

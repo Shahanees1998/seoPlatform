@@ -1,6 +1,9 @@
+import { getUsers } from 'actions/userActions'
 import AddUsert from 'components/Users/addUser'
 import React from 'react'
+
 const ClientComponent = async (): Promise<JSX.Element> => {
+  const users = await getUsers()
   return (
     <>
       <div
@@ -31,89 +34,46 @@ const ClientComponent = async (): Promise<JSX.Element> => {
                     <thead className="text-md text-left font-semibold text-gray-700 uppercase bg-gray-1 border dark:bg-gray-700 dark:text-gray-400">
                       <tr className="">
                         <th scope="col" className="border-r px-6 py-3">
-                          Nom
+                          ID
                         </th>
                         <th scope="col" className="border-r px-6 py-3">
-                          Date expiration
+                          Name
                         </th>
                         <th scope="col" className="border-r px-6 py-3">
-                          Contenus
+                          Email
                         </th>
                         <th scope="col" className="border-r px-6 py-3">
-                          Backlinks
-                        </th>
-                        <th scope="col" className="border-r px-6 py-3">
-                          Social
-                        </th>
-                        <th scope="col" className="px-6 py-3">
-                          Action
+                          Email Verified
                         </th>
                       </tr>
                     </thead>
                     <tbody>
-                      <tr className="bg-white border dark:bg-gray-800">
-                        <th className="px-6 py-5 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                          Saint Jory radiateurs
-                        </th>
-                        <td className="px-6 py-5">
-                          31/12/2028
-                        </td>
-                        <td className="px-6 py-5">
-                          60
-                        </td>
-                        <td className="px-6 py-5">
-                          24
-                        </td>
-                        <td className="px-6 py-5">
-                          24
-                        </td>
-                        <td className="px-6 py-5 flex items-center">
-                          <a ><img className="mr-5" src="/images/hero/eye.png" /></a>
-                          <a ><img src="/images/hero/link.png" /></a>
-                        </td>
-                      </tr>
-                      <tr className="bg-white border dark:bg-gray-800">
-                        <th className="px-6 py-5 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                          Saint Jory radiateurs
-                        </th>
-                        <td className="px-6 py-5">
-                          31/12/2028
-                        </td>
-                        <td className="px-6 py-5">
-                          60
-                        </td>
-                        <td className="px-6 py-5">
-                          24
-                        </td>
-                        <td className="px-6 py-5">
-                          24
-                        </td>
-                        <td className="px-6 py-5 flex items-center">
-                          <a ><img className="mr-5" src="/images/hero/eye.png" /></a>
-                          <a ><img src="/images/hero/link.png" /></a>
-                        </td>
-                      </tr>
-                      <tr className="bg-white border dark:bg-gray-800">
-                        <th className="px-6 py-5 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                          Saint Jory radiateurs
-                        </th>
-                        <td className="px-6 py-5">
-                          31/12/2028
-                        </td>
-                        <td className="px-6 py-5">
-                          60
-                        </td>
-                        <td className="px-6 py-5">
-                          24
-                        </td>
-                        <td className="px-6 py-5">
-                          24
-                        </td>
-                        <td className="px-6 py-5 flex items-center">
-                          <a ><img className="mr-5" src="/images/hero/eye.png" /></a>
-                          <a ><img src="/images/hero/link.png" /></a>
-                        </td>
-                      </tr>
+                      {
+                        (users as any)?.data?.data?.map((user: any, index: number) => {
+                          return (
+                            <tr key={index} className="bg-white border dark:bg-gray-800">
+                            <th className="px-6 py-5 font-medium text-gray-900 whitespace-nowrap dark:text-white">
+                              {user?.id}
+                            </th>
+                            <td className="px-6 py-5">
+                            {user?.name}
+                            </td>
+                            <td className="px-6 py-5">
+                            {user?.email}
+                            </td>
+                            <td className="px-6 py-5">
+                            {user?.email_verified_at != null ? 'true' : 'false'}
+                            </td>
+
+                            <td className="px-6 py-5 flex items-center">
+                              <a ><img className="mr-5" src="/images/hero/eye.png" /></a>
+                              <a ><img src="/images/hero/link.png" /></a>
+                            </td>
+                          </tr>
+                          )
+                        })
+                      }
+
                     </tbody>
                   </table>
                 </div>
